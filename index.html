@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shinigami | Hu Tao</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Floating fire particles -->
+    <div id="particles-container"></div>
+    
+    <!-- Floating flowers -->
+    <div id="flowers-container"></div>
+    
+    <!-- Mouse follower glow -->
+    <div id="mouse-glow"></div>
+
+    <!-- Fire trails canvas -->
+    <canvas id="fireCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="nav-wrapper">
+                <h1 class="logo">
+                    <span class="fire-text">胡桃</span>
+                    <span class="glow-text">SHINIGAMI</span>
+                </h1>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="nav-links" id="navLinks">
+                    <button class="nav-btn active" data-section="home">Home</button>
+                    <button class="nav-btn" data-section="about">About</button>
+                    <button class="nav-btn" data-section="education">Education</button>
+                    <button class="nav-btn" data-section="experience">Experience</button>
+                    <button class="nav-btn" data-section="project">Project</button>
+                    <button class="nav-btn" data-section="contact">Contact</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Home Section -->
+        <section id="home" class="content-section active">
+            <div class="home-hero">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-flame">🔥</span>
+                        <span>Pyro Vision Holder</span>
+                    </div>
+                    <h1 class="hero-title">
+                        <span class="title-main">Hu Tao</span>
+                        <span class="title-sub">胡桃</span>
+                    </h1>
+                    <p class="hero-subtitle">77th Director of Wangsheng Funeral Parlor</p>
+                    <div class="hero-description">
+                        <p>A quirky and cheerful girl with a mischievous spirit!</p>
+                        <p>Bringing warmth and passion to every journey ✨</p>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-card">
+                            <div class="stat-icon">💼</div>
+                            <div class="stat-value">5+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">🚀</div>
+                            <div class="stat-value">50+</div>
+                            <div class="stat-label">Projects Done</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">⭐</div>
+                            <div class="stat-value">100%</div>
+                            <div class="stat-label">Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-frame">
+                        <img src="img/home.jpg" alt="Hu Tao">
+                        <div class="frame-glow"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="floating-elements">
+                <div class="float-card">🔥 Passionate Developer</div>
+                <div class="float-card">✨ Creative Designer</div>
+                <div class="float-card">💻 Problem Solver</div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="content-section">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-images">
+                    <div class="about-image-main">
+                        <img src="img/about.jpg" alt="Hu Tao Portrait">
+                        <div class="image-border"></div>
+                    </div>
+                    <div class="about-image-small">
+                        <img src="img/about2.jpg" alt="Hu Tao Art">
+                    </div>
+                    <div class="floating-badge">
+                        <span class="badge-text">Pyro Element</span>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <p class="about-intro">
+                        Hello! I'm <strong>Hu Tao</strong>, a passionate developer with a fiery spirit and creative soul. 
+                        Like flames that dance gracefully in the wind, I bring energy and innovation to every project! 🔥
+                    </p>
+                    <p class="about-text">
+                        My philosophy is simple: <em>life is short, make every moment extraordinary!</em> Whether it's 
+                        crafting beautiful code, designing stunning interfaces, or solving complex challenges, I approach 
+                        everything with dedication, creativity, and a playful smile.
+                    </p>
+                    <div class="skills-showcase">
+                        <div class="skill-item">
+                            <div class="skill-icon">💡</div>
+                            <h3>Creative Thinking</h3>
+                            <p>Transforming wild ideas into beautiful reality</p>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">🔥</div>
+                            <h3>Passionate Execution</h3>
+                            <p>Burning desire for excellence in every detail</p>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 98%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">✨</div>
+                            <h3>Innovative Solutions</h3>
+                            <p>Creating magic through code and design</p>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 92%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="content-section">
+            <div class="section-header">
+                <h2 class="section-title">Education Journey</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="education-container">
+                <div class="education-sidebar">
+                    <img src="img/education.jpg" alt="Hu Tao Study">
+                    <div class="sidebar-quote">
+                        <p>"Knowledge is the flame that lights the path to mastery"</p>
+                    </div>
+                </div>
+                <div class="education-timeline">
+                    <div class="edu-card premium">
+                        <div class="edu-year">2018 - 2022</div>
+                        <div class="edu-content">
+                            <div class="edu-icon">🎓</div>
+                            <h3>Bachelor of Computer Science</h3>
+                            <p class="edu-school">Liyue Technology University</p>
+                            <p class="edu-desc">
+                                Specialized in Full-Stack Development and Interactive Design. 
+                                Graduated with honors, focusing on modern web technologies and user experience design.
+                            </p>
+                            <div class="edu-tags">
+                                <span>Web Development</span>
+                                <span>UI/UX Design</span>
+                                <span>Database Systems</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edu-card premium">
+                        <div class="edu-year">2022</div>
+                        <div class="edu-content">
+                            <div class="edu-icon">🏆</div>
+                            <h3>Advanced Web Development Certification</h3>
+                            <p class="edu-school">Teyvat Institute of Technology</p>
+                            <p class="edu-desc">
+                                Intensive program focused on cutting-edge frameworks, interactive animations, 
+                                and creating immersive user experiences that leave lasting impressions.
+                            </p>
+                            <div class="edu-tags">
+                                <span>React & Vue</span>
+                                <span>3D Graphics</span>
+                                <span>Performance</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="content-section">
+            <div class="section-header">
+                <h2 class="section-title">Professional Experience</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="experience-grid">
+                <div class="exp-card featured">
+                    <div class="exp-header">
+                        <div class="exp-badge">Current</div>
+                        <div class="exp-duration">2023 - Present</div>
+                    </div>
+                    <h3>Senior Frontend Developer</h3>
+                    <p class="exp-company">🏢 Wangsheng Digital Solutions</p>
+                    <p class="exp-desc">
+                        Leading the development of highly interactive web applications with stunning visual effects. 
+                        Specializing in creating memorable user experiences through innovative animations and modern design patterns.
+                    </p>
+                    <div class="exp-achievements">
+                        <div class="achievement">
+                            <span class="check">✓</span>
+                            <span>Led team of 5 developers on 10+ major projects</span>
+                        </div>
+                        <div class="achievement">
+                            <span class="check">✓</span>
+                            <span>Improved performance by 60% through optimization</span>
+                        </div>
+                        <div class="achievement">
+                            <span class="check">✓</span>
+                            <span>Implemented cutting-edge design systems</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <div class="exp-duration">2022 - 2023</div>
+                    </div>
+                    <h3>Full-Stack Developer</h3>
+                    <p class="exp-company">💼 Liyue Tech Solutions</p>
+                    <p class="exp-desc">
+                        Developed and maintained multiple web applications using modern tech stack. 
+                        Collaborated with designers and product managers to deliver pixel-perfect implementations.
+                    </p>
+                    <div class="exp-achievements">
+                        <div class="achievement">
+                            <span class="check">✓</span>
+                            <span>Built 15+ responsive web applications</span>
+                        </div>
+                        <div class="achievement">
+                            <span class="check">✓</span>
+                            <span>Integrated RESTful APIs and databases</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="experience-image">
+                <img src="img/expe.jpg" alt="Hu Tao Working">
+            </div>
+        </section>
+
+        <!-- Project Section -->
+        <section id="project" class="content-section">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card spotlight">
+                    <div class="project-image">
+                        <img src="img/1.jpg" alt="Project">
+                        <div class="project-overlay">
+                            <button class="view-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-badge">Featured</div>
+                        <h3>Spirit Soother Platform</h3>
+                        <p>Interactive meditation and wellness app with real-time 3D animations, particle effects, and immersive soundscapes. Built with React and Three.js.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Three.js</span>
+                            <span>WebGL</span>
+                            <span>GSAP</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">⭐ 10k+ Users</div>
+                            <div class="stat">🔥 95% Rating</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card spotlight">
+                    <div class="project-image">
+                        <img src="img/2.jpg" alt="Project">
+                        <div class="project-overlay">
+                            <button class="view-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Pyro Analytics Dashboard</h3>
+                        <p>Real-time data visualization platform with dynamic charts, heat maps, and interactive graphs. Features blazing-fast performance and stunning fire-themed aesthetics.</p>
+                        <div class="project-tech">
+                            <span>Vue.js</span>
+                            <span>D3.js</span>
+                            <span>Chart.js</span>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">📊 500k Data Points</div>
+                            <div class="stat">⚡ Real-time</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="img/3.jpg" alt="Project">
+                        <div class="project-overlay">
+                            <button class="view-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Flame Portfolio Showcase</h3>
+                        <p>Creative portfolio template with mesmerizing particle systems and smooth page transitions.</p>
+                        <div class="project-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="img/4.jpg" alt="Project">
+                        <div class="project-overlay">
+                            <button class="view-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Ghost Tales Interactive Blog</h3>
+                        <p>Storytelling platform with parallax scrolling and atmospheric sound design.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>MongoDB</span>
+                            <span>Express</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="content-section">
+            <div class="section-header">
+                <h2 class="section-title">Let's Create Magic Together</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-left">
+                    <div class="contact-intro">
+                        <h3>Ready to ignite something amazing?</h3>
+                        <p>Whether you have a project in mind, want to collaborate, or just want to say hi, I'd love to hear from you! Let's create something extraordinary together! 🔥✨</p>
+                    </div>
+                    <div class="contact-image">
+                        <img src="https://i.pinimg.com/736x/b8/9d/2e/b89d2e4c7f6a5e3d9a2b4c5d6e7f8a9b.jpg" alt="Hu Tao Contact">
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-btn">
+                            <span class="social-icon">📧</span>
+                            <span>Email</span>
+                        </a>
+                        <a href="#" class="social-btn">
+                            <span class="social-icon">💼</span>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="#" class="social-btn">
+                            <span class="social-icon">🐱</span>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="#" class="social-btn">
+                            <span class="social-icon">🐦</span>
+                            <span>Twitter</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label>Your Name</label>
+                            <input type="text" placeholder="What should I call you?" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" placeholder="your@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Subject</label>
+                            <input type="text" placeholder="What's on your mind?" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea rows="5" placeholder="Tell me all about it..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <span>Send Message</span>
+                            <span class="btn-glow"></span>
+                        </button>
+                    </form>
+                    <div class="contact-info-cards">
+                        <div class="info-card">
+                            <div class="info-icon">📧</div>
+                            <div>
+                                <div class="info-label">Email</div>
+                                <div class="info-value">hutao@wangsheng.com</div>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon">📍</div>
+                            <div>
+                                <div class="info-label">Location</div>
+                                <div class="info-value">Liyue Harbor, Teyvat</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <h3 class="footer-logo">胡桃 Hu Tao</h3>
+                    <p>Creating digital experiences with passion and fire</p>
+                </div>
+                <div class="footer-right">
+                    <p>&copy; 2026 Hu Tao Portfolio - Wangsheng Funeral Parlor</p>
+                    <p class="footer-tagline">May the flames guide your way! 🔥</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
